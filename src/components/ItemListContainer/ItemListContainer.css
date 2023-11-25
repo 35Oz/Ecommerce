@@ -1,0 +1,12 @@
+.container{
+  
+    margin-bottom: 50px;
+}
+.container .containerLogo{
+   
+    text-align: center;
+}
+.container .containerLogo .logoName{
+    font-size: 50px;
+    color: rgb(51, 29, 1);
+}

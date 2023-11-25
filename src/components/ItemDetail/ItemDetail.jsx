@@ -1,6 +1,7 @@
 import React from 'react'
 
 export const ItemDetail = ({data}) => {
+  
   return (
       
        <div className="card w-25 ">

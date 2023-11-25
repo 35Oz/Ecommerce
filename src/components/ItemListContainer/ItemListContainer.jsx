@@ -1,54 +1,43 @@
 import { useEffect, useState } from "react"
-import { mFetch } from "../../helpers/mFech"
-import { Link, useParams } from "react-router-dom"
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 
+import { useParams } from "react-router-dom"
+import { ItemList } from "../ItemList/ItemList"
+import { Loading } from "../Loading/Loading"
+import './ItemListContainer.css'
 
-function ItemListContainer({greeting}) {
-  const[products, setProducts] = useState([])
-  const [loading, setLoading] = useState (true)
-  const {cid} = useParams()
+function ItemListContainer() {
+  const [products, setProducts] = useState ([])
+  const [loading, setLoading]   = useState (true)
+  const {cid} = useParams ()
 
    useEffect(()=>{
-    if(cid){
-      mFetch() 
-      .then(result => setProducts(result.filter(product => product.category == cid)))
+
+      const dbFirestore     = getFirestore()
+      const queryCollection = collection(dbFirestore, 'products')
+      const queryFilter     = cid ? query (queryCollection, where('category','==',cid)) :  queryCollection
+  
+      getDocs(queryFilter)
+      .then(res => setProducts(res.docs.map(product => ({id: product.id, ...product.data() }) ) ))
       .catch(error => console.log(error))
       .finally(() => setLoading(false))
-
-    }else{
-      mFetch() 
-      .then(result => setProducts(result))
-       .catch(error => console.log(error))
-      .finally(() => setLoading(false))
-    }
+    
   },[cid])
 
   return (
    <>
-    <div>
-      <h2>{greeting}</h2>
-    </div>
-    {
-    loading ? <h2>Cargando...</h2>
-    :
-        products.map (product => 
-        <div className="card w-25 ">
-              <img src={product.imageUrl} className="card-img-top" />
-              <div className="card-body">
-              <p>Nombre: {product.name}</p>
-              <p>Categoria: {product.category}</p>
-              <p>Descripcion: {product.description}</p>
-              <p>Precio: {product.price}</p>
+      <div className="container">
+        <div className="containerLogo">
+          <img src="/assets/logo2.png" width="350" height="350" className="logoImg" />
+   
         </div>
-
-          <div className="card-fo  oter">
-            <Link to={`/detail/${product.id}`}> 
-              <button className="btn btn-outline-dark w-100">detalle</button> 
-            </Link>
-          </div>
-
-        </div>
-    )}
+      </div>
+      {
+      loading ? 
+        <Loading/>
+      :
+        <ItemList products={products}/>
+      }   
    </>
 
   )

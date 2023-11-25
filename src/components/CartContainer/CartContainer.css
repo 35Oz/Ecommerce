@@ -1,0 +1,82 @@
+.containerPrice{
+    font-size: 25px;
+    box-shadow: 5px 5px 5px 5px rgba(85, 85, 85, 0.75);
+    margin: 20px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
+    width: fit-content;
+    background: linear-gradient(rgb(255, 255, 255),
+                            rgb(250, 229, 208)
+    );
+}
+
+.containerPrice .emptyContainer{
+   margin-left: 45px;
+}
+
+.containerProduct{
+    background: linear-gradient(rgb(255, 255, 255),
+                            rgb(250, 229, 208)
+    );
+    box-shadow: 5px 5px 5px 5px rgba(85, 85, 85, 0.75);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 15px;
+    display: flex;
+
+}
+.imgContainer{
+    border-radius: 10px;
+}
+
+.detailContainer{
+    font-size: 25px;
+    padding: 100px;
+    margin: 15px;
+    text-align: center;
+}
+
+.detailContainer .deleteButton{
+   margin-left: 20px;
+   margin-bottom: 5px;
+}
+
+.containerVoid{
+    background: linear-gradient(rgb(255, 255, 255),
+                            rgb(250, 229, 208)
+    );
+    box-shadow: 5px 5px 5px 5px rgba(85, 85, 85, 0.75);
+    padding: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.formContainer{
+        background: linear-gradient(rgb(255, 255, 255),rgb(250, 229, 208));
+        box-shadow: 5px 5px 5px 5px rgba(85, 85, 85, 0.75);
+        width: auto;
+        height: auto;
+        border-radius: 10px;
+        margin: 30px 300px 50px 300px;
+        padding: 15px;
+        text-align: center;
+       
+        
+}
+
+.letherContainer{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttonEnd{
+    margin-top: 15px;
+}
+
+
+
