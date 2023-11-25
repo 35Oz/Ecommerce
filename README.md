@@ -16,7 +16,7 @@ npm run dev
 
  This website is focused on the sale of electronic products, I decided to put together this project
  to provide hardware for both home and work.
-    ---------------------------------------------
+
  Este sitio web está enfocado en la venta de productos electrónicos, decidí armar este proyecto 
  para la facilitación de hardware tanto para la casa como para trabajo.
 
@@ -25,7 +25,7 @@ npm run dev
  
  I decided to use these dependencies since they were the simplest and the ones that could be modified the most,
  giving the website simplicity in the user's view.
-    -----------------------------------------
+
  Decidí utilizar estas dependencias ya que eran las mas simples y las que se mas se podían modificar,
  dándole al sitio web la simpleza a la vista del usuario.
 
