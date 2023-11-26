@@ -11,6 +11,7 @@ cd ecommerce
 npm i
 npm run dev
 ```
+## ApiKey
 
 ## DESCRIPTION & OBJECTIVES
 
@@ -39,6 +40,14 @@ npm run dev
 | react-hot-toast - 2.4.1 | React library that allows you to display popup messages |
 | react-router-dom - 6.17.0 | React library that makes it easier for us to define navigation routes within our application |
     
+## Firebase
+
+  apiKey: "AIzaSyDU6jNabPMrfn5mrPedREa8RtAXijO_96w",
+  authDomain: "ecommerce-f1c3e.firebaseapp.com",
+  projectId: "ecommerce-f1c3e",
+  storageBucket: "ecommerce-f1c3e.appspot.com",
+  messagingSenderId: "300500728974",
+  appId: "1:300500728974:web:60b43a9ddb94f3a4a15ddf"
 
 ## React + Vite
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
