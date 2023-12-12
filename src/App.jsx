@@ -9,16 +9,12 @@ import { CartContexProvider } from './contexts/CartContext';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-
-
-
 function App() {
 
   
   return (
+    <BrowserRouter>
       <CartContexProvider>
-        <BrowserRouter>
               <NavBar/> 
               <Routes>
                 <Route path='/' element={ <ItemListContainer/>} />
@@ -27,8 +23,8 @@ function App() {
                 <Route path='/cart' element={ <CartContainer/> } />
                 <Route path='*' element={<Navigate to='/' />} />
               </Routes>
-        </BrowserRouter>
       </CartContexProvider>
+        </BrowserRouter>
   )
 }
 

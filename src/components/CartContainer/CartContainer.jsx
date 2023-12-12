@@ -73,7 +73,7 @@ function CartContainer() {
           </div>
            
           :
-            <div className=''>
+            <>
               {cartList.map(product => 
                                       <div className="containerProduct">
                                         <img  className="imgContainer" src={product.imageUrl} alt="image"/>
@@ -118,7 +118,7 @@ function CartContainer() {
                     </div>
                   </form>
                 </div>
-            </div>
+            </>
           }
         
    </>

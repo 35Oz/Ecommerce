@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { CartWidget } from "../../CartWidget/CartWidget.jsx"
 import './NavBar.css'
 
@@ -12,7 +12,7 @@ function NavBar() {
     <nav className="nav navbar navbar-expand-lg " >
       <div className="container-fluid">
         <a className="navbar-brand" >
-          <img src="/assets/logo.png" width="50" height="50" class="d-inline-block align-top" alt="" />
+          <img src="/assets/logo.png" width="50" height="50" className="d-inline-block align-top"  />
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -27,33 +27,33 @@ function NavBar() {
                   Categorias
               </a>
               <ul className="containerMenu dropdown-menu">
-                  <Link  to='/'>
+                  <NavLink  to='/'>
                     <li>
-                      <a className="dropdown-item" href="#">
-                        <button type="button" class="btn btn-outline-dark">
+                      <p className="dropdown-item" >
+                        <button type="button" className="btn btn-outline-dark">
                           Todas
                         </button>
-                      </a>
+                      </p>
                     </li>
-                  </Link>
+                  </NavLink>
                   {category.map(category=> 
-                  <Link key={category.id} to={`/category/${category.category}`}>
+                  <NavLink key={category.id} to={`/category/${category.category}`}>
                       <li>
-                          <a className="dropdown-item" >
-                            <button type="button" class="btn btn-outline-dark">
+                          <p className="dropdown-item" >
+                            <button type="button" className="btn btn-outline-dark">
                               {category.name}
                             </button>
-                          </a>
+                          </p>
                       </li>
-                  </Link>)}
+                  </NavLink>)}
               </ul>
             </li>
           </ul>
         </div>
       </div>
-      <Link to='/cart'>
+      <NavLink to='/cart'>
       <CartWidget/>
-      </Link>
+      </NavLink>
       
   </nav>
   )

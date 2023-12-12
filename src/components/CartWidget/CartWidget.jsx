@@ -6,8 +6,8 @@ export const CartWidget = () => {
 
   return (
     <div className='cartContainer'>
-       <button  class="btn btn-outline-dark">
-          <i class=" bi-cart">{totalCant() !== 0 && totalCant()
+       <button  className="btn btn-outline-dark">
+          <i className=" bi-cart">{totalCant() !== 0 && totalCant()
           }</i> 
         </button> 
     </div>
